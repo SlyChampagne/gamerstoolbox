@@ -3,4 +3,3 @@ c:\users\cyberdeck18\documents\visual studio 2013\Projects\ConsoleApplicationCyb
 c:\users\cyberdeck18\documents\visual studio 2013\Projects\ConsoleApplicationCyberpunk\ConsoleApplicationCyberpunk\bin\Debug\ConsoleApplicationCyberpunk.pdb
 c:\users\cyberdeck18\documents\visual studio 2013\Projects\ConsoleApplicationCyberpunk\ConsoleApplicationCyberpunk\obj\Debug\ConsoleApplicationCyberpunk.exe
 c:\users\cyberdeck18\documents\visual studio 2013\Projects\ConsoleApplicationCyberpunk\ConsoleApplicationCyberpunk\obj\Debug\ConsoleApplicationCyberpunk.pdb
-C:\Users\CyberDeck18\Documents\Visual Studio 2013\Projects\ConsoleApplicationCyberpunk\ConsoleApplicationCyberpunk\obj\Debug\ConsoleApplicationCyberpunk.csprojResolveAssemblyReference.cache

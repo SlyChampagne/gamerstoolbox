@@ -18,6 +18,9 @@ namespace ConsoleApplicationCyberpunk
 
         public void RollDice(Int16 nbrDice, Int16 dicetype)
         {
+            //[0] contains the total value of all dice rolled.
+            //other array position 1 to nbrdice contains the dice result
+
             Int16[] thishandresult = new Int16[nbrDice + 1];
             thishandresult[0] = 0;
 
@@ -31,6 +34,50 @@ namespace ConsoleApplicationCyberpunk
             }
             handresult = thishandresult;
         }
+        public void RollDice(Int16 nbrDice, Int16 dicetype, bool rerollduplicates)
+        {
+            //[0] contains the total value of all dice rolled.
+            //other array position 1 to nbrdice contains the dice result
+
+            Int16[] thishandresult = new Int16[nbrDice + 1];
+            thishandresult[0] = 0;
+            DiceBag dice = new DiceBag();
+
+
+            for (Int16 i = 1; i <= nbrDice; i++)
+            {
+                
+                dice.RollDie(dicetype);
+
+                bool dicerollaccepted = true;
+
+                //dicerollaccepted = ValidateRollAlreadyExists(thishandresult, dice.diceresult);
+
+                if (dicerollaccepted)
+                {
+                    thishandresult[0] += dice.diceresult;
+                    thishandresult[i] = dice.diceresult;
+                }
+            }
+            handresult = thishandresult;
+        }
+
+        private bool ValidateRollAlreadyExists(Int16[] handtocheck, Int16 thisvalue)
+        {
+            bool bvalueexists = false;
+
+            for (Int16 i = 1; i <= (Int16)(handtocheck.Length); i++)
+            {
+                if (handtocheck[i] == thisvalue)
+                {
+                    bvalueexists = true;
+                    break;
+                }
+            }
+
+            return !bvalueexists;
+        }
+
 
         public void RollDie(Int16 nMaxValue)
         {
